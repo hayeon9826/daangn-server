@@ -1,24 +1,7 @@
-# README
+# daangn-server
+당근마켓 서비스 서버 개발 과제
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 로컬 테스트 방법
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 실서버 테스트 방법
