@@ -1,0 +1,8 @@
+<% alert ||= nil %>
+
+<div class="toast-red toast <%= browser.device.mobile? ? 'mobile-alert' : 'web-alert' %>" role="alert">
+  <%= alert %>
+  <button type="button" class="close pull-right toast-close" data-dismiss="toast-red" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

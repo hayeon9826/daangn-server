@@ -1,0 +1,18 @@
+<% title ||= nil %>
+<% back ||= nil %>
+<% nav ||= nil %>
+
+<header>
+  <% if back %>
+    <a class="go-back-link" href="/"><i class="fa fa-arrow-left"></i></a>
+  <% end %>
+  <h1 class="page-title"><%= title %></h1>
+  <% if nav %>
+    <div class="navi-menu-button">
+      <em></em>
+      <em></em>
+      <em></em>
+    </div>
+  <% end %>
+</header>
+<!-- Header area end -->

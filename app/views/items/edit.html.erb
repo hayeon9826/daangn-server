@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <%= render 'shared/nav_menu' %>
+  <div class="wrapper-inline">
+    <%= render 'shared/header', back: true, title: "상품 수정" %>
+    <main>
+      <section class="container">
+        <%= form_for @item, url: item_path(@item), method: :patch do |f| %>
+          <div class="form-divider"></div>
+          <div class="form-row-group with-icons">
+            <div class="form-row no-padding">
+              <i class="fa fa-camera"></i>
+              <%= f.file_field :image, class: "form-element" %>
+            </div>
+          </div>
+          <div class="form-mini-divider"></div>
+          <div class="form-row-group">
+            <div class="form-row no-padding">
+              <%= f.text_field :title, class: "form-element", placeholder: "제목 입력", required: true %>
+            </div>
+          </div>
+          <div class="form-mini-divider"></div>
+          <div class="form-row-group">
+            <div class="form-row no-padding">
+              <%= f.text_area :desc, class: "form-element", placeholder: "상세 설명 입력" %>
+            </div>
+          </div>
+          <div class="form-mini-divider"></div>
+          <div class="form-row-group with-icons">
+            <div class="form-row no-padding">
+              <i class="fa fa-money"></i>
+              <%= f.text_field :price, class: "form-element", placeholder: "가격", required: true %>
+            </div>
+          </div>
+          <div class="form-mini-divider"></div>
+          <div class="form-row-group with-icons">
+            <div class="form-row no-padding">
+              <i class="fa fa-map-marker"></i>
+              <%= f.text_field :location, class: "form-element", placeholder: "거래 지역", required: true %>
+            </div>
+          </div>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <div class="form-divider"></div>
+          <div class="form-row">
+            <%= f.submit "완료", class: "button circle block green" %>
+					</div>
+        <% end %>
+      </section>
+
+    </main>
+    <!-- Page content end -->
+  </div>
+</div>
+
+
+t.string "title"
+t.text "desc"
+t.string "image"
+t.string "location"
+t.string "price"
+t.datetime "created_at", precision: 6, null: false
+t.datetime "updated_at", precision: 6, null: false
+t.bigint "user_id"

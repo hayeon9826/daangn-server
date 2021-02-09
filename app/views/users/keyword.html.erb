@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <%= render 'shared/nav_menu' %>
+  <div class="wrapper-inline">
+    <%= render 'shared/header', back: true, title: "키워드 알림 설정" %>
+    <main>
+      <section class="container">
+        <div class="search-form">
+      		<span class="close-search-form" data-search="close"><i class="fa fa-times"></i> </span>
+      		<%= form_with url: keyword_user_path(current_user.id), method: :post, remote: true do |f| %>
+      			<div class="search-input">
+              <input type="text" name="q" class="form-element" placeholder="키워드를 입력해주세요">
+              <button type="submit" class="search-input-btn"><i class="fa fa-arrow-right"></i></button>
+      			</div>
+      		<% end %>
+      		<div class="recent-search">
+      			<h4 class="search-group-title">나의 키워드</h4>
+            <% current_user&.tag_list&.each do |word| %>
+              <span class="search-tag">
+                <%= word %>
+                <%= link_to keyword_user_path(current_user.id, q: word), method: :delete do %>
+                  <span aria-hidden="true">&times;</span>
+                <% end %>
+              </span>
+            <% end %>
+      		</div>
+      	</div>
+      </section>
+    </main>
+    <!-- Page content end -->
+  </div>
+</div>

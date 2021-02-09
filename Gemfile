@@ -24,6 +24,16 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'devise-i18n'
+gem 'browser'
+gem 'devise'
+gem 'carrierwave', '~> 2.0'
+
+gem 'acts-as-taggable-on', '~> 7.0'
+
+# active admin
+gem 'activeadmin'
+gem "active_material", github: "vigetlabs/active_material"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

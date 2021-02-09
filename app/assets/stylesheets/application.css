@@ -12,4 +12,73 @@
  *
  *= require_tree .
  *= require_self
+ *= stub "active_admin"
  */
+
+
+.item-title{
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+}
+
+.item-price{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.toast-green{
+  background-color: rgb(0, 200, 81);
+  position: relative;
+  width: 100%;
+  padding:15px 15px 15px 15px;
+  margin:0;
+  overflow: hidden;
+  filter: alpha(opacity=95);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  opacity: .95;
+  color: white;
+  float: right;
+  z-index: 8;
+}
+
+.toast-red{
+  background-color: #ff3547;
+  position: relative;
+  width: 100%;
+  padding:15px 15px 15px 15px;
+  margin:0;
+  overflow: hidden;
+  filter: alpha(opacity=95);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  opacity: .95;
+  color: white;
+  float: right;
+  z-index: 8;
+}
+
+.mobile-alert{
+  margin-top: 0px;
+  z-index: 1000;
+  position: fixed;
+}
+
+.web-alert{
+  z-index: 1000;
+  position: fixed;
+}
+
+.toast-close{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+
+}

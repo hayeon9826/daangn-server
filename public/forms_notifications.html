@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <script>
+        // Ignore this in your implementation
+        window.isMbscDemo = true;
+    </script>
+
+    <title>Notifications</title>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.jquery.min.css">
+    <script src="js/mobiscroll.jquery.min.js"></script>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<div mbsc-page class="demo-notifications">
+  <div style="height:100%">
+      <div mbsc-form>
+        <div class="mbsc-form-group">
+            <div class="mbsc-form-group-title">Toast</div>
+            <div class="mbsc-btn-group-block">
+                <button mbsc-button id="md-toast-bottom">Bottom toast</button>
+                <button mbsc-button id="md-toast-top">Top toast</button>
+                <button mbsc-button id="md-toast-primary">Primary toast</button>
+                <button mbsc-button id="md-toast-secondary">Secondary toast</button>
+                <button mbsc-button id="md-toast-success">Success toast</button>
+                <button mbsc-button id="md-toast-danger">Danger toast</button>
+                <button mbsc-button id="md-toast-warning">Warning toast</button>
+                <button mbsc-button id="md-toast-info">Info toast</button>
+            </div>
+        </div>
+        <div class="mbsc-form-group">
+            <div class="mbsc-form-group-title">Snackbar</div>
+            <div class="mbsc-btn-group-block">
+                <button mbsc-button id="md-snackbar-bottom">Bottom snackbar</button>
+                <button mbsc-button id="md-snackbar-top">Top snackbar</button>
+                <button mbsc-button id="md-snackbar-action">Snackbar with action</button>
+                <button mbsc-button id="md-snackbar-primary">Primary snackbar</button>
+                <button mbsc-button id="md-snackbar-secondary">Secondary snackbar</button>
+                <button mbsc-button id="md-snackbar-success">Success snackbar</button>
+                <button mbsc-button id="md-snackbar-danger">Danger snackbar</button>
+                <button mbsc-button id="md-snackbar-warning">Warning snackbar</button>
+                <button mbsc-button id="md-snackbar-info">Info snackbar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+    mobiscroll.settings = {
+        theme: 'ios',              // Specify theme like: theme: 'ios' or omit setting to use default
+            themeVariant: 'light'  // More info about themeVariant: https://docs.mobiscroll.com/4-10-8/forms#opt-themeVariant
+    };
+
+    $(function () {
+
+        $('#md-toast-bottom').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent'
+            });
+        });
+
+        $('#md-toast-top').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                display: 'top',
+                color: 'success'
+            });
+        });
+
+        $('#md-toast-primary').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                color: 'primary'
+            });
+        });
+
+        $('#md-toast-secondary').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                color: 'secondary'
+            });
+        });
+
+        $('#md-toast-success').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                color: 'success'
+            });
+        });
+
+        $('#md-toast-danger').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                color: 'danger'
+            });
+        });
+
+        $('#md-toast-warning').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                color: 'warning'
+            });
+        });
+
+        $('#md-toast-info').on('click', function () {
+            mobiscroll.toast({
+
+                message: 'Message sent',
+                color: 'info'
+            });
+        });
+
+        $('#md-snackbar-bottom').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded'
+            });
+        });
+
+        $('#md-snackbar-top').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                display: 'top'
+            });
+        });
+
+        $('#md-snackbar-action').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Connection timed out. Showing limited messages.',
+                button: {
+                    text: 'Retry',
+                    action: function () {
+                        mobiscroll.toast({
+
+                            message: 'Retrying...'
+                        });
+                    }
+                }
+            });
+        });
+
+        $('#md-snackbar-primary').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                color: 'primary'
+            });
+        });
+
+        $('#md-snackbar-secondary').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                color: 'secondary'
+            });
+        });
+
+        $('#md-snackbar-success').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                color: 'success'
+            });
+        });
+
+        $('#md-snackbar-danger').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                color: 'danger'
+            });
+        });
+
+        $('#md-snackbar-warning').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                color: 'warning'
+            });
+        });
+
+        $('#md-snackbar-info').on('click', function () {
+            mobiscroll.snackbar({
+
+                message: 'Your draft has been discarded',
+                color: 'info'
+            });
+        });
+
+    });
+</script>
+
+</body>
+</html>

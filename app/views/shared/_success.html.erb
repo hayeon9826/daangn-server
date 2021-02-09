@@ -1,0 +1,8 @@
+<% notice ||= nil %>
+
+<div class="toast-green toast <%= browser.device.mobile? ? 'mobile-alert' : 'web-alert' %>" role="alert">
+  <%= notice %>
+  <button type="button" class="close pull-right toast-close" data-dismiss='toast-green' aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

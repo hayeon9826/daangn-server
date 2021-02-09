@@ -1,0 +1,82 @@
+<div class="wrapper">
+  <%= render 'shared/nav_menu' %>
+  <div class="wrapper-inline">
+    <%= render 'shared/header', back: false, nav: true %>
+    <main class="fix-top-menu">
+        <!-- TAB CONTROL START -->
+        <div class="tab-item">
+          <div class="tab-menu fix-width">
+            <a class="menu-item active" href="javascript:void(0);" data-content="contentPost">게시물</a>
+            <a class="menu-item" href="javascript:void(0);" data-content="contentFavorites">키워드 알림</a>
+          </div>
+          <div class="tab-content">
+            <div class="content-item active" id="contentPost">
+              <section class="container">
+                <% if @items.present? %>
+                  <div class="form-divider"></div>
+                  <% @items.each do |item| %>
+                    <%= link_to item_path(item.id) do %>
+                      <div class="news-list-item">
+                        <div class="list-image">
+                          <img src="<%= item&.image.thumb.url.presence || '/img/avatar-bg.jpg' %>" width="100" height="100">
+                        </div>
+                        <div class="list-content">
+                          <div class="item-title"><%= item&.title.truncate(30) %></div>
+                          <a href="#" class="list-author"><%= item&.location %></a> <span class="list-time"><%= item.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+                          <div class="item-price"><%= item&.price %></div>
+                        </div>
+                      </div>
+                    <% end %>
+                    <div class="form-mini-divider"></div>
+                  <% end %>
+                <% else %>
+                <div class="form-divider"></div>
+                <div class="list-box">
+    							<a class="list-item">
+    								<span class="list-author">게시물이 없습니다.</span>
+    							</a>
+    						</div>
+                <% end %>
+              </section>
+            </div>
+            <div class="content-item" id="contentFavorites">
+              <section class="container">
+                <div class="form-mini-divider"></div>
+                <div class="pull-right">
+                  <a href="<%= user_signed_in? ? keyword_user_path(current_user.id) : new_user_session_path %>" class="button circle green">키워드 관리</a>
+                </div>
+                <div class="form-divider"></div>
+                <% if @notifications.present? %>
+                  <% @notifications.each do |notice| %>
+                    <%= link_to item_path(notice.item.id) do %>
+                      <div class="news-list-item">
+                        <div class="list-image">
+                          <img src="<%= notice.item&.image.thumb.url.presence || '/img/avatar-bg.jpg' %>" width="100" height="100">
+                        </div>
+                        <div class="list-content">
+                          <span class="list-category green">알림</span>
+                          <h2 class="list-title"><%= notice&.title.truncate(40) %></h2>
+                          <span class="list-author"><span class="list-time"><%= notice.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span></span>
+                        </div>
+                      </div>
+                    <% end %>
+                    <div class="form-mini-divider"></div>
+                  <% end %>
+                <% else %>
+                  <div class="list-box">
+                    <a class="list-item">
+                      <span class="list-author"><%= user_signed_in? ? "알림이 없습니다." : "로그인 해주세요." %></span>
+                    </a>
+                  </div>
+                <% end %>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTROL END -->
+
+    </main>
+    <!-- Page content end -->
+  </div>
+</div>
+<a class="bouble-link orange txt-white" href="<%= user_signed_in? ? new_item_path : new_user_session_path %>"><i class="fa fa-plus"></a>

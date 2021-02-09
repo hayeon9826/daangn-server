@@ -6,11 +6,55 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,900" rel="stylesheet">
+  	<!-- Fontawesome font file css -->
+  	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="/css/global.style.css">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+  	<script src="/js/global.script.js"></script>
   </head>
-
   <body>
+    <style type="text/css">
+      body{background-color: #fff; margin:0; padding:0; font-family:'Nunito'; color:#333;}
+      .mobile-phone{max-width: 25rem; height: 100rem; position: relative; margin: 0 auto;}
+      iframe {
+                width: 100%;
+                height: 100%;
+                max-width: 28rem;
+                margin: 0 auto;
+                display: block;
+                border: 0.5px solid #eee;
+            }
+      /* .iframe-phone{border:none; position: absolute; top: 68px; left: 21px;} */
+      .test-text{text-align: center;}
+      .links{text-align: center; padding-bottom: 15px;}
+      .title{font-size:30px; text-align: center;}
+      .button.active{background: #EEE; border:solid 1px #DDD; color: #666; cursor: default;}
+      .template_url{background:#FFF; height:40px; padding:5px 20px; border:solid 2px #333; border-radius:5px; display:block; width:300px; font-family:'Nunito'; font-weight:700; margin: 20px auto; }
+    </style>
+    <% if alert.present? %>
+      <%= render 'shared/alert', alert: alert %>
+    <% end %>
+    <% if notice.present? %>
+      <%= render 'shared/success', notice: notice %>
+    <% end %>
     <%= yield %>
+    <!--Page loader DOM Elements. Requared all pages-->
+    <div class="sweet-loader">
+      <div class="box">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+      </div>
+    </div>
+    <script>
+      $('.toast-close').on('click', function(){
+        $('.toast').css('display', 'none')
+      })
+      setTimeout(function() { $(".toast").fadeOut(); }, 3500);
+
+    </script>
   </body>
 </html>
