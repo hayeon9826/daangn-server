@@ -1,6 +1,7 @@
 # Dockerfile
 # Use ruby image to build our own image
-FROM ruby:2.7.1
+FROM heroku/ruby
+#FROM ruby:2.7.1
 MAINTAINER hayeonkim226@gmail.com
 # We specify everything will happen within the /app folder inside the container
 WORKDIR /app
