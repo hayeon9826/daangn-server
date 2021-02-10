@@ -24,16 +24,16 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: db
   timeout: 5000
   username: postgres
+  host: db
   password: <%= ENV['PG_PASSWORD'] %>
   # host: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
   database: daangn_server_development
-  host: db
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

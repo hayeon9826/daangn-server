@@ -2,11 +2,14 @@
 version: '3.0'
 services:
   db:
+    restart: always
     image: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
   web:
     build: .
     entrypoint: /daangn-server/entrypoint.sh

@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y curl
 RUN mkdir /daangn-server
 WORKDIR /daangn-server
 # We copy these files from our current application to the /app container
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
+COPY Gemfile /daangn-server/Gemfile
+COPY Gemfile.lock /daangn-server/Gemfile.lock
 # We install all the dependencies
 RUN gem install bundler
 RUN bundle install
