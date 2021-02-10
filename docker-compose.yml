@@ -6,14 +6,16 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
-      POSTGRES_PASSWORD: "password"
+      POSTGRES_PASSWORD: password
   web:
     build: .
+    entrypoint: /daangn-server/entrypoint.sh
+    command: ["rails", "server", "-b", "0.0.0.0"]
     volumes:
-      - .:/app
+      - .:/daangn-server
     ports:
       - "3000:3000"
     depends_on:
       - db
     environment:
-      PG_PASSWORD: "password"
+      PG_PASSWORD: password
