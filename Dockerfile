@@ -5,7 +5,9 @@
 FROM heroku/heroku:20
 MAINTAINER hayeonkim226@gmail.com
 # We specify everything will happen within the /app folder inside the container
-WORKDIR /app
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN mkdir /myapp
+WORKDIR /myapp
 # We copy these files from our current application to the /app container
 COPY Gemfile Gemfile.lock ./
 # We install all the dependencies
