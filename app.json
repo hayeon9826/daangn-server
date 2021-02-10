@@ -1,0 +1,8 @@
+{
+  "name": "Docker Rails App Daangn-Server",
+  "description": "daangn-server test by hayeonkim226@gmail.com",
+  "image": "heroku/ruby",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
