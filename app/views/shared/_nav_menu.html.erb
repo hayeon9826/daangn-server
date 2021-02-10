@@ -1,31 +1,36 @@
 <div class="nav-menu">
   <nav class="menu">
     <!-- Template logo start -->
-    <div class="nav-header">
+    <!-- <div class="nav-header">
       <a href="home.html"><img src="/img/app-logo.png" width="160"></a>
-    </div>
+    </div> -->
     <!-- Template logo end -->
     <!-- Menu navigation start -->
     <div class="nav-container">
       <ul class="main-menu">
         <li>
-          <a href="home.html"><i class="fa fa-home"></i> Home</a>
-        </li>
-        <li>
-          <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> Entry <span class="fa fa-angle-down"></span></a>
+          <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> 로그인 <span class="fa fa-angle-down"></span></a>
           <ul>
             <% if user_signed_in? %>
               <li><%= link_to "로그아웃", destroy_user_session_path, method: :delete, :"data-loader" => "show" %></li>
-
             <% else %>
               <li><a href="<%= new_user_session_path %>" data-loader="show">로그인</a></li>
               <li><a href="<%= new_user_registration_path %>" data-loader="show">회원가입</a></li>
-              <li><a href="login.html" data-loader="show">Login</a></li>
-              <li><a href="signup.html" data-loader="show">Register</a></li>
-              <li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
             <% end %>
           </ul>
         </li>
+        <% if Rails.env.development? %>
+        <li>
+          <a href="home.html"><i class="fa fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> 로그인 <span class="fa fa-angle-down"></span></a>
+          <ul>
+            <li><a href="login.html" data-loader="show">Login</a></li>
+            <li><a href="signup.html" data-loader="show">Register</a></li>
+          </ul>
+        </li>
+        <li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
         <li>
           <a href="javascript:void(0);"><i class="fa fa-file-image-o"></i> Gallery <span class="fa fa-angle-down"></span></a>
           <ul>
@@ -83,6 +88,7 @@
             <li><a href="blank.html" data-loader="show">Blank Page</a></li>
           </ul>
         </li>
+        <% end %>
       </ul>
     </div>
   <!-- Menu navigation end -->
