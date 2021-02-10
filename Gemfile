@@ -31,6 +31,8 @@ gem 'carrierwave', '~> 2.0'
 
 gem 'acts-as-taggable-on', '~> 7.0'
 
+gem 'figaro'
+
 # active admin
 gem 'activeadmin'
 gem "active_material", github: "vigetlabs/active_material"
