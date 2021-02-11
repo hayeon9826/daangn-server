@@ -16,6 +16,7 @@ COPY Gemfile /daangn-server/Gemfile
 COPY Gemfile.lock /daangn-server/Gemfile.lock
 # We install all the dependencies
 RUN gem install bundler
+RUN bundle config --global silence_root_warning 1
 RUN bundle install
 
 # We copy all the files from our current application to the /app container
