@@ -2,7 +2,7 @@
 # Use ruby image to build our own image
 #FROM heroku/ruby
 FROM ruby:2.7.1
-#FROM heroku/heroku:20
+FROM heroku/heroku:20
 MAINTAINER hayeonkim226@gmail.com
 # We specify everything will happen within the /app folder inside the container
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
