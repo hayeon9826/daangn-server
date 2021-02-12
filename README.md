@@ -33,8 +33,7 @@ admin@example / password
 https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행하거나, 이미 생성된 테스트 계정으로 로그인 합니다.
 
 
-<img src="https://user-images.githubusercontent.com/38210233/107742004-984e9f00-6d51-11eb-89df-fa2ec410392e.jpeg" width="35%">
-<img src="https://user-images.githubusercontent.com/38210233/107742134-d2b83c00-6d51-11eb-816f-5b4afaba8096.jpeg" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107742004-984e9f00-6d51-11eb-89df-fa2ec410392e.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107742134-d2b83c00-6d51-11eb-816f-5b4afaba8096.jpeg" width="35%">
 
 **1. 중고거래 게시글 작성 api**
 
@@ -60,17 +59,13 @@ https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행�
 
 메인 페이지에 '키워드 알림' 탭에서 '키워드 관리'눌러줍니다.
 
-<img src="https://user-images.githubusercontent.com/38210233/107742333-304c8880-6d52-11eb-82ee-b8fed5e50a68.jpeg" width="35%">
-
-<img src="https://user-images.githubusercontent.com/38210233/107742533-891c2100-6d52-11eb-9ecc-e711cf29c962.jpeg" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107742333-304c8880-6d52-11eb-82ee-b8fed5e50a68.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107742533-891c2100-6d52-11eb-9ecc-e711cf29c962.jpeg" width="35%">
 
 
 
 해당 페이지에서 키워드를 입력하면 알림 생성 flash와 함께 키워드가 생성됩니다.
 
-<img src="https://user-images.githubusercontent.com/38210233/107742550-9507e300-6d52-11eb-8390-92236241183e.jpeg" width="35%">
-
-<img src="https://user-images.githubusercontent.com/38210233/107742568-9f29e180-6d52-11eb-85e8-87048a2838cc.jpeg" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107742550-9507e300-6d52-11eb-8390-92236241183e.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107742568-9f29e180-6d52-11eb-85e8-87048a2838cc.jpeg" width="35%">
 
 
 키워드 우측의 'x' 버튼을 누르면 키워드가 삭제됩니다.
