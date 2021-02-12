@@ -12,34 +12,31 @@
         <div class="form-divider"></div>
         <div class="form-divider"></div>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
           <div class="form-row-group with-icons">
             <div class="form-row no-padding">
               <i class="fa fa-envelope"></i>
               <%= f.email_field :email, autofocus: true, class: "form-element", placeholder: "이메일 입력" %>
             </div>
-
+            <div class="form-mini-divider"></div>
             <div class="form-row no-padding">
               <i class="fa fa-lock"></i>
               <%= f.password_field :password, class: "form-element", placeholder: "비밀번호 입력"  %>
             </div>
-
+            <div class="form-mini-divider"></div>
             <div class="form-row no-padding">
               <i class="fa fa-lock"></i>
               <%= f.password_field :password_confirmation, class: "form-element", placeholder: "비밀번호 확인"  %>
             </div>
+            <div class="form-mini-divider"></div>
           </div>
-
           <div class="form-divider"></div>
           <div class="form-row">
             <%= f.submit "회원가입", class: "button circle block green" %>
           </div>
         <% end %>
-
         <div class="form-row txt-center">
           <%= render "devise/shared/links" %>
         </div>
-
         <div class="form-divider"></div>
       </section>
     </main>
