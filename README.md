@@ -5,12 +5,14 @@
 
 본 프로젝트는 헤로쿠 서버에 배포해두었으며, 어드민을 접속해 데이터를 확인하실 수 있습니다.
 <br>
+'''
 #### 배포 url: 
 https://daangn-server.herokuapp.com/ 
 
 
 #### 어드민 url: 
 https://daangn-server.herokuapp.com/admin
+'''
 
 #### 테스트 계정(아이디/비밀번호):
 test@test / 123qwe
