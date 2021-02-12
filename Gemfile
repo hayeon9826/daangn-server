@@ -24,14 +24,19 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+# 회원관리
 gem 'devise-i18n'
 gem 'browser'
 gem 'devise'
+
+# aws s3
+gem 'fog', '~> 1.41.0'
 gem 'carrierwave', '~> 2.0'
-
-gem 'acts-as-taggable-on', '~> 7.0'
-
+# 환경변수 설정
 gem 'figaro'
+
+# 키워드 알림
+gem 'acts-as-taggable-on', '~> 7.0'
 
 # active admin
 gem 'activeadmin'
