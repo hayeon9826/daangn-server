@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   def destroy
     begin
       @item.destroy
-      redirect_to items_path, notice: "상품을 삭제했습니다."
+      redirect_to root_path, notice: "상품을 삭제했습니다."
     rescue
     end
   end

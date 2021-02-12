@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <%= render 'shared/nav_menu' %>
+  <div class="wrapper-inline">
+    <%= render 'shared/header', back: true, nav: true, title: "내 게시물" %>
+    <div class="padding-half">
+      <main class="container">
+        <%= render 'shared/items', items: @items %>
+      </main>
+    </div>
+    <!-- Page content end -->
+  </div>
+</div>

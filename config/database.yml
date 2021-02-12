@@ -26,14 +26,12 @@ default: &default
   pool: 5
   timeout: 5000
   username: postgres
-  host: db
   password: <%= ENV['PG_PASSWORD'] %>
   # host: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
   database: daangn_server_development
-  host: localhost
 
 
   # The specified database role being used to connect to postgres.

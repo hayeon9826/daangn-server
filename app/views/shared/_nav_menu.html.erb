@@ -8,17 +8,31 @@
     <!-- Menu navigation start -->
     <div class="nav-container">
       <ul class="main-menu">
-        <li>
-          <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> 로그인 <span class="fa fa-angle-down"></span></a>
-          <ul>
-            <% if user_signed_in? %>
+        <% if user_signed_in? %>
+          <li>
+            <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> 로그아웃<span class="fa fa-angle-down"></span></a>
+            <ul>
               <li><%= link_to "로그아웃", destroy_user_session_path, method: :delete, :"data-loader" => "show" %></li>
-            <% else %>
+            </ul>
+          </li>
+          <li>
+            <a href="<%= keyword_user_path(current_user.id) %>"><i class="fa fa-magic"></i> 키워드 관리</a>
+          </li>
+          <li>
+            <a href="<%= new_item_path %>"><i class="fa fa-plus"></i>게시물 생성</a>
+          </li>
+          <li>
+            <a href="<%= items_user_path(current_user.id) %>"><i class="fa fa-file-text-o"></i> 내 게시물</a>
+          </li>
+        <% else %>
+          <li>
+            <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> 로그인<span class="fa fa-angle-down"></span></a>
+            <ul>
               <li><a href="<%= new_user_session_path %>" data-loader="show">로그인</a></li>
               <li><a href="<%= new_user_registration_path %>" data-loader="show">회원가입</a></li>
-            <% end %>
-          </ul>
-        </li>
+            </ul>
+          </li>
+        <% end %>
         <% if Rails.env.development? %>
         <li>
           <a href="home.html"><i class="fa fa-home"></i> Home</a>

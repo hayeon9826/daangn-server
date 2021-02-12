@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     @result = @user.save
   end
 
+  def items
+    @items = current_user.items
+  end
+
   private
 
   def set_user

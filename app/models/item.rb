@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   mount_uploader :image, ImageUploader
   belongs_to :user, optional: true
+  has_many :notifications, dependent: :destroy
 
   after_create :create_notification
 

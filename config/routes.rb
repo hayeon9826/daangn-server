@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get :keyword, on: :member
     post :keyword, on: :member
     delete :keyword, on: :member
+    get :items, on: :member
   end
 
 
