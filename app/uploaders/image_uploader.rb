@@ -5,9 +5,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :right_orientation
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file
+  storage :file if Rails.env.development?
   # aws s3 연동
-  storage :fog
+  storage :fog if Rails.env.production?
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -42,8 +42,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
 
-  version :big do
-    process resize_to_fill: [400,400]
+  version :square do
+    process resize_to_fill: [500,500]
   end
 
   version :thumb do
