@@ -82,7 +82,7 @@ https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행�
 
 * 각 키워드 우측의 'x' 버튼을 누르면 "키워드를 삭제했습니다" 라는 flash와 함께 키워드가 삭제됩니다.
 
-<img src="https://user-images.githubusercontent.com/38210233/107742595-acdf6700-6d52-11eb-88d8-01f7814903d5.jpeg" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107742595-acdf6700-6d52-11eb-88d8-01f7814903d5.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107757120-76ace200-6d68-11eb-9c92-004d0b899d56.jpeg" width="35%">
 
 
 **3. 키워드 알림 발송 기능**
