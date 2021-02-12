@@ -427,6 +427,7 @@ section.container{
 }
 .form-row-group.with-icons .form-row .form-element{
 	padding-left: 24px;
+	-webkit-appearance: none;
 }
 .form-element{
 	display: block;
