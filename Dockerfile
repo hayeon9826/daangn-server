@@ -16,6 +16,7 @@ WORKDIR /daangn-server
 COPY Gemfile /daangn-server/Gemfile
 COPY Gemfile.lock /daangn-server/Gemfile.lock
 
+RUN gem update --system
 RUN gem install bundler -v 2.2.9
 RUN bundle install
 
