@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :notifications, dependent: :destroy
 
+  # 키워드 생성 젬
   acts_as_taggable
 end

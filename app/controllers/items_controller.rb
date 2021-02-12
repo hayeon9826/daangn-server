@@ -17,10 +17,13 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @item.update(item_params)
-      redirect_to item_path(@item), notice: "게시물을 수정했습니다."
-    else
-      render 'edit', alert: "다시 시도해주세요"
+    begin
+      if @item.update(item_params)
+        redirect_to item_path(@item), notice: "게시물을 수정했습니다."
+      else
+        render 'edit', alert: "다시 시도해주세요"
+      end
+    rescue
     end
   end
 

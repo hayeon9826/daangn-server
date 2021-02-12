@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+
     if !browser.device.mobile? and !browser.device.tablet? and params[:web].blank?
       redirect_to "/web"
     end
@@ -16,4 +17,5 @@ class HomeController < ApplicationController
       redirect_to "/"
     end
   end
+  
 end

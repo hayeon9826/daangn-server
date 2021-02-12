@@ -11,6 +11,7 @@ class Item < ApplicationRecord
   def create_notification
     tag_list = self.title.split(" ")
     User.tagged_with(tag_list, any: true).each do |user|
+      # 제목에 태그 포함된 유저들에게 알림 생성 (본인제외)
       if user != self.user
         user.notifications.create(title: "[#{(tag_list & user&.tag_list).join(", ")} 키워드 알림] #{self&.location} - #{self&.title}", user: user, item: self)
       end
@@ -18,6 +19,7 @@ class Item < ApplicationRecord
   end
 
   def destroy_assets
+    # amazon s3에서도 삭제
     self.image.remove! if self.image
     self.save!
   end
