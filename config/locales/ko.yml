@@ -1,4 +1,14 @@
 ko:
+  attributes:
+    id: ID
+    user: 사용자
+    name: 이름
+    email: 이메일
+    created_at: "생성시간"
+    updated_at: "수정시간"
+    deleted_at: "삭제시간"
+    title: 제목
+    item: 상품
   active_admin:
     dashboard: "대시보드"
     dashboard_welcome:
@@ -161,3 +171,25 @@ ko:
       first: 처음
       prev: 이전
       truncate: ...
+  activerecord:
+    attributes:
+      user:
+        name: 이름
+        email: 이메일
+      admin_user:
+        name: 이름
+        email: 이메일
+        current_sign_in_at: "최근 로그인"
+        sign_in_count: "로그인 횟수"
+      item:
+        title: 제목
+        desc: 내용
+        image: 이미지
+        location: 위치
+        price: 가격
+    models:
+      admin_user: 관리자
+      item: 게시물
+      notification: 알림
+      tag: 키워드(tag)
+      tagging: 키워드 내역(tagging)
