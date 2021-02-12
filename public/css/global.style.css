@@ -527,6 +527,7 @@ select.form-element{
 	box-shadow: none;
 }
 .button.green{
+	-webkit-appearance: none;
 	background-color: #2DD67B;
 	color: #FFF;
 	border-color:transparent;

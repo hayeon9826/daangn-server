@@ -6,14 +6,15 @@
       <section class="container">
         <div class="search-form">
       		<span class="close-search-form" data-search="close"><i class="fa fa-times"></i> </span>
-      		<%= form_with url: keyword_user_path(current_user.id), method: :post, remote: true do |f| %>
+      		<%= form_with url: keyword_user_path(current_user.id), method: :post do %>
       			<div class="search-input">
-              <input type="text" name="q" class="form-element" placeholder="키워드를 입력해주세요">
+              <input type="text" name="q" class="form-element" placeholder="키워드를 입력해주세요. (예: 노트북)">
               <button type="submit" class="search-input-btn"><i class="fa fa-arrow-right"></i></button>
       			</div>
       		<% end %>
       		<div class="recent-search">
-      			<h4 class="search-group-title">나의 키워드</h4>
+      			<h4 class="search-group-title">알림 받을 키워드 (<%= current_user.tag_list.count %>)</h4>
+            <br>
             <% current_user&.tag_list&.each do |word| %>
               <span class="search-tag">
                 <%= word %>
@@ -26,6 +27,4 @@
       	</div>
       </section>
     </main>
-    <!-- Page content end -->
-  </div>
 </div>

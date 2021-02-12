@@ -9,7 +9,6 @@
             <img src="<%= @item&.image.square.url.presence || '/img/avatar-bg.jpg' %>">
           </div>
         </div>
-
         <h1 class="product-view-title txt-orange"><%= @item&.title %></h1>
         <h4 class="product-view-price"><%= @item&.price.presence || '0' %>원</h4>
 
@@ -21,9 +20,7 @@
         <div class="panel">
           <i class="fa fa-map-marker"></i> &nbsp;<%= @item&.location %>
         </div>
-
         <div class="form-mini-divider"></div>
-
         <div class="panel">
           <%= simple_format(@item&.desc) %>
         </div>
@@ -42,6 +39,5 @@
         <% end %>
       </section>
     </main>
-    <!-- Page content end -->
   </div>
 </div>
