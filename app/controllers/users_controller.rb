@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def items
-    @items = current_user.items
+    @items = current_user&.items&.order(created_at: :desc)
   end
 
   private
