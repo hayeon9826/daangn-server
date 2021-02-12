@@ -18,6 +18,8 @@ https://daangn-server.herokuapp.com/
 https://daangn-server.herokuapp.com/admin
 ```
 
+<img width="70%" alt="admin_user" src="https://user-images.githubusercontent.com/38210233/107744817-b66ace00-6d56-11eb-8dbb-fad3578b8dca.png">
+
 #### 테스트 계정(아이디/비밀번호):
 ```
 test@test / 123qwe
@@ -37,7 +39,7 @@ admin@example / password
 https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행하거나, 이미 생성된 테스트 계정으로 로그인 합니다.
 
 
-<img src="https://user-images.githubusercontent.com/38210233/107742004-984e9f00-6d51-11eb-89df-fa2ec410392e.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107742134-d2b83c00-6d51-11eb-816f-5b4afaba8096.jpeg" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107745061-0e093980-6d57-11eb-80ef-f5b49bd32d2e.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107742134-d2b83c00-6d51-11eb-816f-5b4afaba8096.jpeg" width="35%">
 
 **1. 중고거래 게시글 작성 api**
 
