@@ -57,7 +57,7 @@ https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행�
 * 생성된 게시물은 바로 메인 페이지에 노출되며, 게시글을 눌러 상세페이지에서 수정 및 삭제를 할 수 있습니다.
 
 
-<img src="https://user-images.githubusercontent.com/38210233/107742253-0bf0ac00-6d52-11eb-9b77-05b2e1de5eee.png" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107745061-0e093980-6d57-11eb-80ef-f5b49bd32d2e.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107742253-0bf0ac00-6d52-11eb-9b77-05b2e1de5eee.png" width="35%">
 
 
 
@@ -82,7 +82,7 @@ https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행�
 
 * 각 키워드 우측의 'x' 버튼을 누르면 "키워드를 삭제했습니다" 라는 flash와 함께 키워드가 삭제됩니다.
 
-<img src="https://user-images.githubusercontent.com/38210233/107742595-acdf6700-6d52-11eb-88d8-01f7814903d5.jpeg" width="35%">
+<img src="https://user-images.githubusercontent.com/38210233/107742595-acdf6700-6d52-11eb-88d8-01f7814903d5.jpeg" width="35%">  <img src="https://user-images.githubusercontent.com/38210233/107757120-76ace200-6d68-11eb-9c92-004d0b899d56.jpeg" width="35%">
 
 
 **3. 키워드 알림 발송 기능**
