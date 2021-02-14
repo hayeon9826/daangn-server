@@ -17,5 +17,5 @@ class HomeController < ApplicationController
       redirect_to "/"
     end
   end
-  
+
 end
