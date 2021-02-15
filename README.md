@@ -5,8 +5,8 @@
 - 김하연(hayeonkim226@gmail.com)
 
 #### 사용 기술
-- ruby 2.7.1
-- rails 6.1.2
+- Ruby 2.7.1
+- Rails 6.1.2
 - Docker
 - Postgresql
 
