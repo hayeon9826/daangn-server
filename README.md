@@ -1,7 +1,8 @@
 # daangn-server
 당근마켓 서비스 서버 개발 과제
 
-- 지원자: 김하연(hayeonkim226@gmail.com)
+#### 지원 정보
+- 김하연(hayeonkim226@gmail.com)
 
 #### 사용 기술
 - ruby 2.7.1
