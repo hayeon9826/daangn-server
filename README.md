@@ -22,7 +22,7 @@
 https://daangn-server.herokuapp.com/
 ```
 
-#### 관지라 페이지 url:
+#### 관리자 페이지 url:
 ```
 https://daangn-server.herokuapp.com/admin
 ```
