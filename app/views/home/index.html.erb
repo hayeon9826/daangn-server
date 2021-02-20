@@ -31,7 +31,7 @@
                         </div>
                         <div class="list-content">
                           <span class="list-category green">알림</span>
-                          <h2 class="list-title"><%= notice&.title.truncate(40) %></h2>
+                          <h2 class="list-title"><%= notice&.title&.truncate(40) %></h2>
                           <span class="list-author"><span class="list-time"><%= notice.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span></span>
                         </div>
                       </div>

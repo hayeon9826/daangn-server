@@ -221,12 +221,12 @@ nav.menu ul.main-menu>li li a{
 [4. Inline Wrapper]
 *------------------------------------------------------------------*/
 .wrapper-inline{
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	top: 0;
-	background-color: #F5F6F8;
-	overflow: auto;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		top: 0;
+		background-color: #F5F6F8;
+		overflow: auto;
 }
 .wrapper.with-bg-image .wrapper-inline{
 	background-color: rgba(255,255,255,0.9);
@@ -248,6 +248,7 @@ header{
 	height: 50px;
 	border-bottom:solid 1px #EEE;
 	padding: 10px;
+
 
 }
 

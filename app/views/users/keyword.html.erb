@@ -13,7 +13,7 @@
       			</div>
       		<% end %>
       		<div class="recent-search">
-      			<h4 class="search-group-title">알림 받을 키워드 (<%= current_user.tag_list.count %>)</h4>
+      			<h5 class="search-group-title">알림 받을 키워드 (<%= current_user.tag_list.count %>)</h5>
             <br>
             <% current_user&.tag_list&.each do |word| %>
               <span class="search-tag">

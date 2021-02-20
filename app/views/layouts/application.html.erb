@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DaangnServer</title>
+    <title>Daangn Server</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   	<!-- Fontawesome font file css -->
   	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="/css/global.style.css">
@@ -17,6 +17,28 @@
   </head>
   <body>
     <style type="text/css">
+      /* .web으로 로그인 시 css 변경 */
+      <% if !browser.device.mobile? && !browser.device.tablet? %>
+      .search-form, .wrapper{
+        width: 28rem !important;
+        left: 33% !important;
+      }
+
+      header{
+        width: 28rem !important;
+        left: 33% !important;
+      }
+
+      .toast-red, .toast-green{
+        width: 28rem !important;
+        left: 33% !important;
+      }
+
+      .bouble-link{
+        right: 30% !important;
+      }
+      <% end %>
+
       body{background-color: #fff; margin:0; padding:0; font-family:'Nunito'; color:#333;}
       .mobile-phone{max-width: 25rem; height: 100rem; position: relative; margin: 0 auto;}
       iframe {

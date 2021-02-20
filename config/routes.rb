@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   }
 
   root 'home#index'
-  
-  # web으로 접속했을 때
-  get '/web' => 'home#web'
+
   resources :items
 
   resources :users do
