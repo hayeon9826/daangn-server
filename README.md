@@ -5,6 +5,7 @@
 - Ruby 2.7.1
 - Rails 6.1.2
 - Postgresql
+- (AWS) S3
 - (배포) heroku
 ***
 
