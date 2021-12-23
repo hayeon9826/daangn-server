@@ -1,15 +1,11 @@
 # daangn-server
-당근마켓 서비스 서버 개발 과제
-
-#### 지원 정보
-- 김하연(hayeonkim226@gmail.com)
+당근마켓 키워드 알림 앱 구현
 
 #### 사용 기술
 - Ruby 2.7.1
 - Rails 6.1.2
-- Docker
 - Postgresql
-
+- (배포) heroku
 ***
 
 ### 실서버 테스트 방법
@@ -116,7 +112,3 @@ https://daangn-server.herokuapp.com/ 에 접속하셔서 회원가입을 진행�
 * 또한, 키워드 알림은 게시글이 삭제되면 함께 삭제됩니다.
 
 ***
-
-감사합니다.
-
-혹시 기타 문의사항이 있으면 hayeonkim226@gmail.com 으로 연락 부탁드립니다.
